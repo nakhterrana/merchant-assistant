@@ -1,0 +1,46 @@
+<?php
+namespace App\Http\Controllers\Api;
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
+use App\Http\Controllers\Controller;
+use App\Http\Traits\ApiResponder;
+use Config, Validator, Input, Constants, Helper;
+
+
+class ChatAIController extends Controller
+{
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+
+    use ApiResponder;
+
+    public function newPrompt(Request $request){
+        
+        $input = $request->input();
+     
+        $inputQueryRequest = Constants::QUERY_INPUT_REQUEST;
+
+        $validator = Validator::make($input, [
+            $inputQueryRequest =>'required',
+        ]);
+
+        if ($validator->fails ()) {
+            return response ($validator->getMessageBag()->all(),
+                Config::get ( 'error.code.BAD_REQUEST' ),[]);
+        }
+
+
+        if(isset($input[$inputQueryRequest])){    
+            $data = Helper::google_ai_api_request($input[$inputQueryRequest]);
+            
+            return $this->success($data);
+        }
+
+        return response('error',Config::get('error.code.BAD_REQUEST'));
+    }
+
+}

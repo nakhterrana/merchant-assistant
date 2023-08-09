@@ -28,7 +28,10 @@ Route::prefix('auth')->group(function () {
     });
 });
 
-
-Route::get('/{url?}', function () {
-    return view('app');
+Route::get('/', function () {
+    return view('chatroom/chatbot');
 });
+
+// Route::get('/{url?}', function () {
+//     return view('app');
+// });

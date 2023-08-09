@@ -8,5 +8,8 @@ return [
     'cache' => [
         'stories_data_key' => 'stories_data',
         'duration' => '1800' // 30 mins
-    ]
+    ],
+    'status' => [
+		'OK' => 200
+	]
 ];
