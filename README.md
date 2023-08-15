@@ -1,66 +1,71 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Merchant Assistant Chat Bot
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Merchant Assistant is a chat bot designed to assist merchants with managing their BigCommerce store data using BigQuery and Vertex AI. The chat bot interacts with the BigCommerce database to retrieve information related to customers, orders, products, and order line items. It then processes the data using Laravel and provides user-friendly responses.
 
-## About Laravel
+## Technologies Used
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- BigQuery: Used for querying the BigCommerce database.
+- Vertex AI: Provides machine learning tools for creating the chat bot.
+- Laravel: Framework used to build the BigCommerce merchant app and integrate with the chat bot.
+- Code-Bison: Tool used to generate BigQuery table schema.
+- Text-Bison: Tool used to make the chat bot responses user-friendly.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Setup Instructions
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+1. Clone the repository:
 
-## Learning Laravel
+   
+   git clone https://github.com/your-username/merchant-assistant.git
+   cd merchant-assistant
+   
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+2. Install dependencies:
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+   
+   composer install
+   
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+3. Configure the BigCommerce API credentials in the `.env` file:
 
-## Laravel Sponsors
+   
+   BIGCOMMERCE_CLIENT_ID=your-client-id
+   BIGCOMMERCE_CLIENT_SECRET=your-client-secret
+   BIGCOMMERCE_ACCESS_TOKEN=your-access-token
+   
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+5. Configure Vertex AI for building the chat bot:
 
-### Premium Partners
+   - Integrate the deployed models with your Laravel app.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+6. Implement the chat bot logic in your Laravel app:
+
+   - Use Vertex AI's endpoints to communicate with the chat bot models.
+   - Process user queries and trigger BigQuery queries based on user input.
+
+7. Use Text-Bison to make the chat bot responses user-friendly:
+
+   - Convert technical data into easily understandable language.
+   - Customize responses for various user interactions.
+
+8. Run the Laravel development server:
+
+   
+   php artisan serve
+   
+
+## How the Chat Bot Works
+
+1. User interacts with the chat bot via the merchant app.
+2. The chat bot processes the user's query and sends it to the deployed Vertex AI model(code-bison).
+3. The model processes the query and responds with the relevant information in form of SQL query.
+4. Chatbot triggers BigQuery queries to retrieve dataof BigCommerce from Google Bigquery.
+5. The chat bot's response is processed by Text-Bison to make it user-friendly.
+6. The transformed response is displayed to the user in the merchant app.
 
 ## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Contributions to Merchant Assistant are welcome! Feel free to submit pull requests to improve the functionality, user experience, or documentation.
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

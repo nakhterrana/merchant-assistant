@@ -190,7 +190,7 @@
         };
         
         $.ajax({
-            url: 'http://localhost/merchant-assistant/public/api/ai/query', // Replace with your actual API URL
+            url: 'http://127.0.0.1:8000/api/ai/query', // Replace with your actual API URL
             type: 'GET',
             data: params,
             success: function(response) {

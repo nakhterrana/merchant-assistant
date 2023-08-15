@@ -18,5 +18,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/ai/query', [App\Http\Controllers\Api\ChatAIController::class, 'newPrompt']);
+Route::get('/ai/query', [App\Http\Controllers\API\ChatAIController::class, 'newPrompt']);
 
