@@ -33,21 +33,21 @@ Merchant Assistant is a chat bot designed to assist merchants with managing thei
    BIGCOMMERCE_ACCESS_TOKEN=your-access-token
     ```
 
-5. Configure Vertex AI for building the chat bot:
+4. Configure Vertex AI for building the chat bot:
 
    - Integrate the deployed models with your Laravel app.
 
-6. Implement the chat bot logic in your Laravel app:
+5. Implement the chat bot logic in your Laravel app:
 
    - Use Vertex AI's endpoints to communicate with the chat bot models.
    - Process user queries and trigger BigQuery queries based on user input.
 
-7. Use Text-Bison to make the chat bot responses user-friendly:
+6. Use Text-Bison to make the chat bot responses user-friendly:
 
    - Convert technical data into easily understandable language.
    - Customize responses for various user interactions.
 
-8. Run the Laravel development server:
+7. Run the Laravel development server:
 
     ```
    php artisan serve
