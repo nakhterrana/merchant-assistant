@@ -108,13 +108,19 @@ To use the Text to SQL API, follow these steps:
 
 3. The API server will start running locally. You can access the API at `http://localhost:5000`.
 
-4. Send a POST request to the API with your natural language text to convert it to an SQL query. You can use tools like `curl` or Postman for testing. For example:
+4. Send a GET request to the API with your natural language text as a query parameter to convert it to an SQL query. For example:
 
     ```
-    curl -X POST -H "Content-Type: application/json" -d '{"query": "Retrieve all customers from New York."}' http://localhost:5000/api/bigquery
+    http://127.0.0.1:5000/api/bigquery?query=Give%20me%20the%20last%20order%20id
     ```
 
 5. The API will respond with a JSON object containing the generated SQL query.
+API will respond with a JSON object like: 
+   ```
+   {
+   "response": "I see. You want to know the last order ID. Let me check my database. It looks like the last order ID is 167."
+   }
+   ```
 
 ## Cleanup
 
