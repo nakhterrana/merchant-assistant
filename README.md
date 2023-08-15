@@ -10,7 +10,7 @@ Merchant Assistant is a chat bot designed to assist merchants with managing thei
 - Code-Bison: Tool used to generate BigQuery table schema.
 - Text-Bison: Tool used to make the chat bot responses user-friendly.
 
-## Setup Instructions
+## Laravel Setup Instructions
 
 1. Clone the repository:
 
@@ -75,7 +75,7 @@ Before you can use this API, make sure you have the following:
 - Python 3.8 or higher installed
 - Google Cloud Platform account with access to the Vertex AI Natural Language Understanding API
 
-## Setup
+## Flask Setup
 
 1. Clone this repository to your local machine:
 
