@@ -10,6 +10,15 @@ Merchant Assistant is a chat bot designed to assist merchants with managing thei
 - Code-Bison: Tool used to generate BigQuery table schema.
 - Text-Bison: Tool used to make the chat bot responses user-friendly.
 
+## How the Chat Bot Works
+
+1. User interacts with the chat bot via the merchant app.
+2. The chat bot processes the user's query and sends it to the deployed Vertex AI model(code-bison).
+3. The model processes the query and responds with the relevant information in form of SQL query.
+4. Chatbot triggers BigQuery queries to retrieve dataof BigCommerce from Google Bigquery.
+5. The chat bot's response is processed by Text-Bison to make it user-friendly.
+6. The transformed response is displayed to the user in the merchant app.
+
 ## Laravel Setup Instructions
 
 1. Clone the repository:
@@ -38,17 +47,6 @@ Merchant Assistant is a chat bot designed to assist merchants with managing thei
     ```
    php artisan serve
     ```
-
-## How the Chat Bot Works
-
-1. User interacts with the chat bot via the merchant app.
-2. The chat bot processes the user's query and sends it to the deployed Vertex AI model(code-bison).
-3. The model processes the query and responds with the relevant information in form of SQL query.
-4. Chatbot triggers BigQuery queries to retrieve dataof BigCommerce from Google Bigquery.
-5. The chat bot's response is processed by Text-Bison to make it user-friendly.
-6. The transformed response is displayed to the user in the merchant app.
-
-
 
 # Text to SQL API using Flask and Google Vertex API
 
