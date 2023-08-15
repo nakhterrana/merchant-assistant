@@ -185,29 +185,29 @@
 
     // Simulated response from the server
     function simulateServerResponse(userMessage) {
-        // Simulate a delay before responding
         var params = {
             query: userMessage,
         };
         
-        // $.ajax({
-        //     url: 'http://localhost/merchant-assistant/public/api/ai/query', // Replace with your actual API URL
-        //     type: 'GET',
-        //     data: params,
-        //     success: function(response) {
-        //         // Process the response here
-        //         const responseMessage = response.data.predictions[0].content;
-        //         appendMessage('Assistant', responseMessage, true);
-        //     },
-        //     error: function(xhr, status, error) {
-        //         console.error('Error:', error);
-        //     }
-        // });
+        $.ajax({
+            url: 'http://localhost/merchant-assistant/public/api/ai/query', // Replace with your actual API URL
+            type: 'GET',
+            data: params,
+            success: function(response) {
+                // Process the response here
+                console.log(response.data.response);
+                const responseMessage = response.data.response;
+                appendMessage('Assistant', responseMessage, true);
+            },
+            error: function(xhr, status, error) {
+                console.error('Error:', error);
+            }
+        });
 // Simulate a delay before responding
-setTimeout(() => {
-            const responseMessage = `I'm a ChatGPT-like assistant. You said: "${userMessage}"`;
-            appendMessage('Assistant', responseMessage, true);
-        }, 1000);
+// setTimeout(() => {
+//             const responseMessage = `I'm a ChatGPT-like assistant. You said: "${userMessage}"`;
+//             appendMessage('Assistant', responseMessage, true);
+//         }, 1000);
 
     }
 

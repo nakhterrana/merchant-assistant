@@ -19,8 +19,8 @@ class Constants
     const STREAM_DISPOSITION = "attachment";
     const READ_FILE_BYTE_ALLOWED = 1024; //1 GB OF FILE CAN BE READ
     const QUERY_INPUT_REQUEST = 'query';
-    const GOOGLE_AI_API = 'https://us-central1-aiplatform.googleapis.com/v1/projects/{{project_id}}/locations/us-central1/publishers/google/models/text-bison:predict';
-    const GOOGLE_PROJECT_ID = 'merchant-assistant-395407';
-    const GOOGLE_KEY_TO_REPLACE = '{{project_id}}';
-    const GOOGLE_AUTH_TOKEN = 'ya29.a0AfB_byCq-yWfoQ9mpmROeyy9XP5Vdn-eMIwgHuvduLe5vzD5JIqPsfPq1im4sWvXlz9CeufbzLiNoNVgRNTsoMF6pBf1xlgULOLWG6mO8wcfj1xf9DS8idMKgWHSG0_KQi0WO-NorUaLKBzNNhyMp-H40pC_SJd3J8eUJQaCgYKAUISARESFQHsvYlsq0XvQWOnFkm_vm3BXrv5GA0173';
+    const GOOGLE_AI_API = 'https://9bde-101-53-226-51.ngrok-free.app/api/bigquery';
+//     const GOOGLE_PROJECT_ID = 'merchant-assistant-395407';
+//     const GOOGLE_KEY_TO_REPLACE = '{{project_id}}';
+//     const GOOGLE_AUTH_TOKEN = 'ya29.a0AfB_byCq-yWfoQ9mpmROeyy9XP5Vdn-eMIwgHuvduLe5vzD5JIqPsfPq1im4sWvXlz9CeufbzLiNoNVgRNTsoMF6pBf1xlgULOLWG6mO8wcfj1xf9DS8idMKgWHSG0_KQi0WO-NorUaLKBzNNhyMp-H40pC_SJd3J8eUJQaCgYKAUISARESFQHsvYlsq0XvQWOnFkm_vm3BXrv5GA0173';
 }

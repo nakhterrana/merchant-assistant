@@ -18,22 +18,21 @@ class Helper{
     public static function google_ai_api_request($query){
 
         $url = Constants::GOOGLE_AI_API;
-        $url = str_replace(Constants::GOOGLE_KEY_TO_REPLACE, Constants::GOOGLE_PROJECT_ID, $url);
-        $object = Helper::createRequestObject($query);
+        // $object = Helper::createRequestObject($query);
 
         
         try{
-            $requestConfig = [
-                'headers' => [
-                    'Authorization' => 'Bearer'.' '.Constants::GOOGLE_AUTH_TOKEN,
-                    'Content-Type'  => 'application/json',
-                ]
-            ];
+            // $requestConfig = [
+            //     'headers' => [
+            //         'Authorization' => 'Bearer'.' '.Constants::GOOGLE_AUTH_TOKEN,
+            //         'Content-Type'  => 'application/json',
+            //     ]
+            // ];
     
-            $requestConfig['body'] = json_encode($object);  
+            // $requestConfig['body'] = json_encode($object);  
 
             $client = new Client;
-            $result = $client->request('POST', $url, $requestConfig);
+            $result = $client->request('GET', $url.'?query='.$query);
             $data = json_decode($result->getBody(), true);
             return $data;
         } catch (Exception $e) {
