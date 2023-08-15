@@ -2,14 +2,6 @@
 
 Merchant Assistant is a chat bot designed to assist merchants with managing their BigCommerce store data using BigQuery and Vertex AI. The chat bot interacts with the BigCommerce database to retrieve information related to customers, orders, products, and order line items. It then processes the data using Laravel and provides user-friendly responses.
 
-## Technologies Used
-
-- BigQuery: Used for querying the BigCommerce database.
-- Vertex AI: Provides machine learning tools for creating the chat bot.
-- Laravel: Framework used to build the BigCommerce merchant app and integrate with the chat bot.
-- Code-Bison: Tool used to generate BigQuery table schema.
-- Text-Bison: Tool used to make the chat bot responses user-friendly.
-
 ## How the Chat Bot Works
 
 1. User interacts with the chat bot via the merchant app.
@@ -18,6 +10,14 @@ Merchant Assistant is a chat bot designed to assist merchants with managing thei
 4. Chatbot triggers BigQuery queries to retrieve dataof BigCommerce from Google Bigquery.
 5. The chat bot's response is processed by Text-Bison to make it user-friendly.
 6. The transformed response is displayed to the user in the merchant app.
+
+## Technologies Used
+
+- BigQuery: Used for querying the BigCommerce database.
+- Vertex AI: Provides machine learning tools for creating the chat bot.
+- Laravel: Framework used to build the BigCommerce merchant app and integrate with the chat bot.
+- Code-Bison: Tool used to generate BigQuery table schema.
+- Text-Bison: Tool used to make the chat bot responses user-friendly.
 
 ## Laravel Setup Instructions
 
