@@ -7,7 +7,7 @@ Merchant Assistant is a chat bot designed to assist merchants with managing thei
 1. User interacts with the chat bot via the merchant app.
 2. The chat bot processes the user's query and sends it to the deployed Vertex AI model(code-bison).
 3. The model processes the query and responds with the relevant information in form of SQL query.
-4. Chatbot triggers BigQuery queries to retrieve dataof BigCommerce from Google Bigquery.
+4. Chatbot triggers BigQuery queries to retrieve data of BigCommerce from Google Bigquery.
 5. The chat bot's response is processed by Text-Bison to make it user-friendly.
 6. The transformed response is displayed to the user in the merchant app.
 
