@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services\Bigcommerce;
+namespace App\Services\BigCommerce;
 
 use Illuminate\Support\Facades\Log;
 use Oseintow\Bigcommerce\Bigcommerce;
