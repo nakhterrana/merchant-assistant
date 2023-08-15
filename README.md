@@ -61,17 +61,11 @@ Before you can use this API, make sure you have the following:
 
 ## Flask Setup
 
-1. Clone this repository to your local machine:
-
-    ```
-    git clone https://github.com/your-username/text-to-sql-api.git
-    ```
-
-2. Set up authentication for your Google Cloud Platform account:
+1. Set up authentication for your Google Cloud Platform account:
 
    Follow the [Google Cloud authentication guide](https://cloud.google.com/docs/authentication/getting-started) to set up your credentials.
 
-3. Replace the placeholder values in `textToSql.py` with your actual Google Cloud API credentials:
+2. Replace the placeholder values in `textToSql.py` with your actual Google Cloud API credentials:
 
     ```python
     PROJECT_ID = 'your-project-id'
