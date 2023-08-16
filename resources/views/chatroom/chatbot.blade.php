@@ -43,12 +43,15 @@
         }
 
         .chat-messages {
-            max-height: 400px;
+            max-height: 650px;
             overflow-y: auto;
             font-size: 11px;
             line-height: 1.2;
             height: 100vh;
             background-color: #343541;
+        }
+        .chat-messages::-webkit-scrollbar {
+            display: none;
         }
 
         .message {
@@ -272,7 +275,7 @@
     const $sendMessageBtn = $('#sendMessageBtn');
     const $chatMessages = $('#chatMessages');
 
-    var typingDelay = 50; // Adjust this to control typing speed (milliseconds)
+    var typingDelay = 30; // Adjust this to control typing speed (milliseconds)
     var currentCharIndex = 0;
     var mainmessage = '';
 
