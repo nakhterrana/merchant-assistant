@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link href="{{ asset('storage/css/chatbot.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/chatbot.css') }}" rel="stylesheet">
 </head>
 <body>
     <div class="chat-container">
@@ -40,6 +40,6 @@
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="{{ asset('storage/js/chatbot.js') }}"></script>
+    <script src="{{ asset('js/chatbot.js') }}"></script>
 </body>
 </html>

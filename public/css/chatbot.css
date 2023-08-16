@@ -1,0 +1,232 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.chat-container {
+    width: 90%;
+    max-width: 100%;
+    margin: 50px auto;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+}
+
+.chat-header {
+    background-color: #343541;
+    color: #ffffff;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid rgba(32,33,35,.5);
+}
+
+.chat-header h1 {
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    margin: 0;
+    font-weight: 400;
+}
+
+.chat-messages {
+    max-height: 400px;
+    overflow-y: auto;
+    font-size: 11px;
+    line-height: 1.2;
+    height: 100vh;
+    background-color: #343541;
+}
+
+.message {
+    padding: 13px 30px 13px 60px;
+    background-color: #f0f0f0;
+    box-sizing: border-box;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 24px;
+    position: relative;
+}
+
+.message.sender-user {
+    background-color: #444654;
+    width: 100%;
+}
+
+.message.sender-assistant {
+    background-color: #343541;
+    width: 100%;
+}
+
+.chat-input {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #000000;
+    padding: 10px 15px;
+    background-color: #343541;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#messageInput {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    height: 26px;
+    background-color: #343541;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+/*#messageInput::placeholder {
+    color: #ffffff;
+}
+
+#messageInput:-ms-input-placeholder {
+    color: #ffffff;
+}
+
+#messageInput::-ms-input-placeholder {
+    color: #ffffff;
+}*/
+
+#sendMessageBtn {
+    margin-left: 10px;
+    padding: 8px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 46px;
+    width: 46px;
+    background-color: #444654;
+}
+
+#sendMessageBtn svg {
+    fill: #8f8888;
+}
+
+#sendMessageBtn:hover {
+    background-color: #ebebeb;
+}
+
+#sendMessageBtn:hover svg {
+    fill: #000000;
+}
+
+
+.message:before {
+    content: '';
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 34px;
+    width: 34px;
+    position: absolute;
+    left: 15px;
+    top: 8px;
+}
+
+.message.sender-assistant:before {
+    background-image: url("../images/favicon.ico");
+    background-color: #444654;
+        background-size: 70%;
+}
+
+.message.sender-user:before {
+    background-image: url("../images/user.svg");
+    background-size: 70%;
+    background-color: #343541;
+}
+
+.dot-pulse {
+    position: relative;
+    left: -9999px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #646464;
+    color: #646464;
+    box-shadow: 9999px 0 0 -5px;
+    animation: dot-pulse 1.5s infinite linear;
+    animation-delay: 0.25s;
+    margin: 0 auto;
+    opacity: 0;
+}
+
+.loader.active .dot-pulse {
+    opacity: 1;
+}
+
+.dot-pulse::before, .dot-pulse::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #646464;
+    color: #646464;
+}
+.dot-pulse::before {
+    box-shadow: 9984px 0 0 -5px;
+    animation: dot-pulse-before 1.5s infinite linear;
+    animation-delay: 0s;
+}
+.dot-pulse::after {
+    box-shadow: 10014px 0 0 -5px;
+    animation: dot-pulse-after 1.5s infinite linear;
+    animation-delay: 0.5s;
+}
+
+.loader-wrap {
+    background-color: #343541;
+    padding: 10px 0;
+}
+
+@keyframes dot-pulse-before {
+    0% {
+        box-shadow: 9984px 0 0 -5px;
+    }
+    30% {
+        box-shadow: 9984px 0 0 2px;
+    }
+    60%, 100% {
+        box-shadow: 9984px 0 0 -5px;
+    }
+}
+@keyframes dot-pulse {
+    0% {
+        box-shadow: 9999px 0 0 -5px;
+    }
+    30% {
+        box-shadow: 9999px 0 0 2px;
+    }
+    60%, 100% {
+        box-shadow: 9999px 0 0 -5px;
+    }
+}
+@keyframes dot-pulse-after {
+    0% {
+        box-shadow: 10014px 0 0 -5px;
+    }
+    30% {
+        box-shadow: 10014px 0 0 2px;
+    }
+    60%, 100% {
+        box-shadow: 10014px 0 0 -5px;
+    }
+}
+
+.disabled {
+    background-color: #0a0a0a;
+    color: #0a0909;
+    cursor: not-allowed;
+    opacity: 0.6;
+    pointer-events: none;
+}
