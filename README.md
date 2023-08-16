@@ -37,12 +37,17 @@ Merchant Assistant is a chat bot designed to assist merchants with managing thei
 3. Configure the BigCommerce API credentials in the `.env` file:
 
     ```
-   BIGCOMMERCE_CLIENT_ID=your-client-id
-   BIGCOMMERCE_CLIENT_SECRET=your-client-secret
-   BIGCOMMERCE_ACCESS_TOKEN=your-access-token
+   BC_APP_CLIENT_ID={BIGCOMMERE-APP-CLIENT-ID}
+   BC_APP_SECRET={BIGCOMMERE-APP-SECRET-KEY}
+   BC_LOCAL_CLIENT_ID={BIGCOMMERE-APP-CLIENT-ID}
+   BC_LOCAL_SECRET={BIGCOMMERE-APP-SECRET-KEY}
     ```
-
-4. Run the Laravel development server:
+4. Generate App KEY:
+   ```
+   php artisan key:generate
+   ```
+   
+5. Run the Laravel development server:
 
     ```
    php artisan serve
