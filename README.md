@@ -31,7 +31,9 @@ Merchant Assistant is a chat bot designed to assist merchants with managing thei
 2. Install dependencies:
 
     ```
+   npm install
    composer install
+   npm run dev
     ```
 
 3. Configure the BigCommerce API credentials in the `.env` file:
