@@ -24,8 +24,8 @@ Merchant Assistant is a chat bot designed to assist merchants with managing thei
 1. Clone the repository:
 
     ```
-   git clone https://github.com/your-username/merchant-assistant.git
-   cd merchant-assistant
+    git clone https://github.com/your-username/merchant-assistant.git
+    cd merchant-assistant
     ```
 
 2. Install dependencies:
