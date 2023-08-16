@@ -11,7 +11,7 @@ use Config, Validator, Input, Constants, Helper;
 class ChatAIController extends Controller
 {
     /**
-     * Create a new controller instance.
+     * Receives user input and send the request to AI api and response back
      *
      * @return void
      */
